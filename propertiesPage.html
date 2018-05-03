@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section class="grid">
+  <div class="col-12 centerText heading padding">
+    <h2>Current Properties</h2>
+    <h4>Check out the current properties that we have listed</h4>
+  </div>
+  <div class="col-12 padding">
+    <p>To learn more about a specific property or to start investing, just click on the listing.</p>
+    <p>Wondering about 1031 thing or how to get started? <a href="/1031">Click here</a></p>
+  </div>
+</section>
+<section class="grid-middle padding">
+
+  {% for post in site.posts %}
+
+    <div class="currentListings col-6_xs-12">
+      <img src="{{ post.feature-image_path }}" alt="">
+      <h4 class="centerText blogPosts"><a href="{{ post.url }}">{{ post.title }}</a><br /></h4>
+      <p>
+        {{ post.excerpt | truncatewords:20 }}
+      </p>
+      <a href="{{post.url}}" class="centerText"> Learn More</a>
+    </div>
+
+  {% endfor %}
+
+</section>
+<section class="grid-middle">
+  <div class="col-12 padding centerText">
+    <p>Have questions? Check out the Frequently asked question page <a href="/faq">here!</a></p>
+    <h3>Want to learn more or get involved? Contact me!</h3>
+  </div>
+  <div class="form col-12 centerText">
+    <form method="POST" action="https://formspree.io/justyngourdin@gmail.com">
+      <input type="name" name="name" placeholder="Your name">
+      <input type="email" name="email" placeholder="Your email">
+      <textarea name="message" placeholder="Your message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>

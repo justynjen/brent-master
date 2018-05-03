@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section>
+  <div class="heading">
+    <h2 class="centerText"> {{page.title}} </h2>
+    <hr class="center">
+
+  </div>
+</section>
+<section class="bgPosts centered" style="background-image:url('{{page.feature-image_path}}');">
+
+</section>
+<section class="singleProperty">
+  <p> {{page.subtitle}} </p>
+    <div class="posts">
+
+      {{content}}
+
+    </div>
+</section>
+<section class="padding centerText grid">
+  <h2 class="col-12">Featured Properties</h2>
+  {% for post in site.posts %}
+
+    <div class="currentListings col-4_xs-12">
+      <img  class="bg blogImage"src="{{ post.feature-image_path }}" alt="">
+      <h4 class="centered blogPosts"><a href="{{ post.url }}">{{ post.title }}</a><br /></h4>
+      <p>
+        {{ post.excerpt | truncatewords:20 }}
+      </p>
+      <a href="{{post.url}}" class="centerText"> Learn More</a>
+    </div>
+
+  {% endfor %}
+</section>

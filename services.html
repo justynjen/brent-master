@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<section class="grid padding">
+  <div class="col-12 centerText heading">
+    <h2>Find out more about what we do</h2>
+    <hr class="center">
+  </div>
+  <div class="col-6">
+    <img src="/images/man.jpeg" alt="">
+  </div>
+    <div class="col-6 padding">
+      <h3>H Brent Stratton</h3>
+        <p>Professional experience in the real estate investment
+    industry includes developing successful workout strategies,
+    asset and property management, acquisitions, underwriting,
+    development, finance, marketing, and raising investor equity.</p>
+    </div>
+    <div class="col-12 centerText">
+      <h2>How will investing change your life?</h2>
+      <h3>Learn more about the process</h3>
+      <hr class="center">
+    </div>
+    <div class="col-6_xs-12 padding">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-6_xs-12 padding">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col-12 padding">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</section>
+<section class="grid-middle">
+  <h2 class="centerText col-12">See our Featured Properties</h2>
+
+  {% for post in site.posts %}
+
+    <div class="currentListings col-6_xs-12 padding centerText">
+      <img src="{{ post.feature-image_path }}" alt="">
+      <h4 class="centered blogPosts"><a href="{{ post.url }}">{{ post.title }}</a><br /></h4>
+      <p>
+        {{ post.excerpt | truncatewords:20 }}
+      </p>
+      <a href="{{post.url}}"> Learn More</a>
+    </div>
+
+  {% endfor %}
+
+</section>
+<section class="grid padding">
+  <div class="col-6">
+
+  </div>
+  <div class="contact section padding col-6 formBackground">
+    <h3 class="centerText padding">Ready to learn more? Contact me!</h3>
+    <div class="form col-12 centerText">
+      <form method="POST" action="https://formspree.io/justyngourdin@gmail.com">
+        <input type="name" name="name" placeholder="Your name">
+        <input type="email" name="email" placeholder="Your email">
+        <textarea name="message" placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+</section>
