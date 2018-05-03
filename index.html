@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<section class="grid content">
-  <div class="col-12 heading">
+<section class="grid content padding" id="page-wrap">
+  <div class="col-12 heading" id="top">
       <h2 class="centerText">Stratton TIC Investments</h2>
       <h4 class="centerText">Specializing in TIC Investments for over 45 years | Over $60M in transactions closed since 2004</h4>
       <hr class="center">
   </div>
   <div class="col-6">
-
+    <img src="/images/man.jpeg" alt="">
   </div>
   <div class="col-6 padding">
     <h3>What we do</h3>
@@ -57,7 +57,7 @@ development, finance, marketing, and raising investor equity.</p>
 
     <div class="currentListings col-4_xs-12">
       <img  class="bg blogImage"src="{{ post.feature-image_path }}" alt="">
-      <h4 class="centered blogPosts"><a href="{{ post.url }}">{{ post.title }}</a><br /></h4>
+      <h3 class="centered blogPosts"><a href="{{ post.url }}">{{ post.title }}</a><br /></h3>
       <p>
         {{ post.excerpt | truncatewords:20 }}
       </p>
@@ -65,21 +65,4 @@ development, finance, marketing, and raising investor equity.</p>
     </div>
 
   {% endfor %}
-</section>
-<section class="padding centerText grid">
-  <div class="col-6">
-    <i class="fas fa-2x fa-phone-square"></i><a href="#">888-888-8888</a>
-    <i class="far fa-2x fa-envelope"></i><a href="#">hello@mail.com</a>
-  </div>
-  <div class="col-6 formBackground">
-    <h3 class="padding">Interested? Contact us to learn more</h3>
-    <div class="form col-12 centerText">
-      <form method="POST" action="https://formspree.io/justyngourdin@gmail.com">
-        <input type="name" name="name" placeholder="Your name">
-        <input type="email" name="email" placeholder="Your email">
-        <textarea name="message" placeholder="Your message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </div>
 </section>

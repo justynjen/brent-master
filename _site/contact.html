@@ -25,7 +25,7 @@
   </head>
   <body class="content">
 
-      <header class="grid-spaceBetween-middle">
+      <header class="grid-spaceBetween-middle backgroundColor">
   <nav class="col-4">
     <a href="/">Logo will go here</a>
   </nav>
@@ -94,24 +94,59 @@
 </section>
 
 
-      <footer class="grid-middle padding">
+      <section class="padding centerText grid">
+  <div class="col-6">
+    <h3 class="padding">Interested? Contact us to learn more</h3>
+    <p>We want to help you get into a safe investment that is going to help you live the retirement of you dreams.</p>
+    <div class="col-12">
+      <i class="fas fa-2x fa-phone-square padding"></i><a href="#">888-888-8888</a>
+    </div>
+    <div class="col-12">
+      <i class="far fa-2x fa-envelope padding"></i><a href="#">hello@mail.com</a>
+    </div>
+  </div>
+  <div class="col-6 formBackground padding">
+    <div class="form col-12 centerText">
+      <h3>Fill in this form!</h3>
+      <form method="POST" action="https://formspree.io/justyngourdin@gmail.com">
+        <input type="name" name="name" placeholder="Your name">
+        <input type="email" name="email" placeholder="Your email">
+        <textarea name="message" placeholder="Your message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+<footer class="grid-middle padding">
   <div class="col-4">
     <p>LOGO</p>
   </div>
-  <div class="col-4">
+  <div class="col-3 centerText">
     <h4>About Me</h4>
-    <p>This is a brief paragraph about me that is great for SEO purposes</p>
-    <i class="fas fa-2x fa-phone-square"></i><a href="#">888-888-8888</a>
-    <i class="far fa-2x fa-envelope"></i><a href="#">hello@mail.com</a>
+    <hr class="center">
+    <h5>Specializing in TIC Investments for over 45 years | Over $60M in transactions closed since 2004</h5>
+    <div class="col-12">
+      <i class="fas fa-2x fa-phone-square padding"></i><a href="#">888-888-8888</a>
+    </div>
+    <div class="col-12">
+      <i class="far fa-2x fa-envelope padding"></i><a href="#">hello@mail.com</a>
+    </div>
   </div>
-  <div class="col-4">
-    <h4 class="centerText">Helpful Links on the site</h4>
+  <div class="col-3 centerText">
+    <h4 class="centerText">Get Around</h4>
+    <hr class="center">
     <ul>
-      <li><a href="/faq">Frequently Asked Questions</a></li>
+      <li><a href="/faq">Home</a></li>
       <li><a href="/services">Our Services</a></li>
-      <li><a href="/1031">1031 Exchange</a></li>
-      <li><a href="/propertiesPage">All the Properties</a></li>
+      <li><a href="/faq">1031 Exchange</a></li>
+      <li><a href="/services">How it Works</a></li>
+      <li><a href="/1031">Current Listings</a></li>
+      <li><a href="/propertiesPage">TIC Investments</a></li>
     </ul>
+  </div>
+  <div class="col-1 centerText">
+    <h5>Jump to top!</h5>
+    <a href="#top"><i class="fas fa-3x fa-arrow-alt-circle-up"></i></a>
   </div>
 </footer>
 <div class="sub-footer">
@@ -164,48 +199,43 @@ if (!event.target.matches('.dropbtn')) {
 }
 </script>
 <script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-if (!event.target.matches('.dropbtn')) {
-
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  var i;
-  for (i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains('show')) {
-      openDropdown.classList.remove('show');
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
     }
-  }
-}
-}
-</script>
-<script>
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+  });
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-if (!event.target.matches('.dropbtn')) {
-
-  var dropdowns = document.getElementsByClassName("dropdown-content");
-  var i;
-  for (i = 0; i < dropdowns.length; i++) {
-    var openDropdown = dropdowns[i];
-    if (openDropdown.classList.contains('show')) {
-      openDropdown.classList.remove('show');
-    }
-  }
-}
-}
 </script>
 
 
