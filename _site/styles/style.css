@@ -66,11 +66,11 @@ h5{
 /* Dropdown Button */
 .dropbtn {
     color: black;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     border: none;
     cursor: pointer;
-    background-color: #1d4265c2;
+    background-color: #1d426500;
 }
 
 /* Dropdown button on hover & focus */
@@ -142,7 +142,7 @@ header{
 }
 nav a{
   padding: 0 25px 0 35px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Open Sans';
   color: black;
 }
