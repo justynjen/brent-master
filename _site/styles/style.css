@@ -187,6 +187,18 @@ nav a{
   min-height: 75vh;
   padding: 2%;
 }
+.imagePDF{
+  height:50%;
+  width:50%;
+}
+.downloadButton{
+  background-color: #1d4265c2;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 1%;
+  text-align: center;
+}
 /*
 ** 1031 EXCHANGE ***
 */
